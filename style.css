@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap');
 
 :root {
   /* Transitions */
@@ -51,7 +51,7 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color var(--transition-speed) var(--transition-smooth), 
