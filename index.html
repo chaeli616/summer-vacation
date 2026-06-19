@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="ko" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Summer Vacation Planner</title>
+  <title>Nihongo Joy | 일본어 학습 대시보드</title>
   <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Premium Header -->
+  <!-- Glassmorphism Header -->
   <header>
     <a href="#" class="logo">
-      <span class="logo-icon">🏖️</span>
-      <span>SummerJoy</span>
+      <span class="logo-icon">🌸</span>
+      <span>Nihongo Joy</span>
     </a>
     
     <!-- Dark/Light Theme Switcher -->
@@ -32,56 +32,55 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-gradient-overlay"></div>
-    <h1>Plan Your <span>Dream Vacation</span></h1>
-    <p>Discover breathtaking destinations, organize your checklist, and get ready for an unforgettable summer adventure.</p>
-    <button class="cta-btn" id="explore-btn">Start Exploring</button>
+    <h1>하루 5분, <span>일본어 공부</span></h1>
+    <p>히라가나/가타카나 카드를 뒤집어 발음을 확인하고, 나만의 일본어 단어장을 만들어 학습해보세요.</p>
+    
+    <!-- 오늘의 표현 Widget -->
+    <div class="daily-widget-container">
+      <div class="daily-card">
+        <div class="daily-content">
+          <span class="daily-tag">오늘의 표현</span>
+          <h2 class="daily-jp" id="daily-jp">木漏れ日</h2>
+          <p class="daily-reading" id="daily-reading">こもれび (코모레비)</p>
+          <p class="daily-kr" id="daily-kr">나뭇잎 사이로 비치는 햇빛</p>
+        </div>
+        <button class="daily-audio-btn" id="daily-audio-btn" title="발음 듣기">🔊</button>
+      </div>
+    </div>
   </section>
 
   <!-- Main Dashboard Grid -->
   <main class="container">
     <div class="dashboard-grid">
       
-      <!-- Destinations Cards -->
+      <!-- Interactive Flashcards -->
       <section class="card">
-        <h2 class="card-title">🌴 Top Destinations 2026</h2>
-        <div class="destinations-list">
-          
-          <div class="dest-card">
-            <div class="dest-image-placeholder">🌊</div>
-            <div class="dest-info">
-              <h3 class="dest-name">Maldives</h3>
-              <p class="dest-desc">Turquoise lagoons, overwater villas, and spectacular coral reefs await you.</p>
-            </div>
+        <h2 class="card-title">📖 인터랙티브 학습 카드</h2>
+        <div class="flashcards-container">
+          <div class="mode-selector">
+            <button class="mode-btn active" id="btn-hiragana">히라가나</button>
+            <button class="mode-btn" id="btn-katakana">가타카나</button>
+            <button class="mode-btn" id="btn-phrases">기초 회화</button>
           </div>
           
-          <div class="dest-card">
-            <div class="dest-image-placeholder">🏔️</div>
-            <div class="dest-info">
-              <h3 class="dest-name">Swiss Alps</h3>
-              <p class="dest-desc">Majestic snowy peaks, green alpine pastures, and scenic train journeys.</p>
-            </div>
+          <!-- Cards Grid -->
+          <div class="cards-grid" id="cards-grid">
+            <!-- Cards will be injected dynamically by main.js -->
           </div>
-          
-          <div class="dest-card">
-            <div class="dest-image-placeholder">⛩️</div>
-            <div class="dest-info">
-              <h3 class="dest-name">Kyoto, Japan</h3>
-              <p class="dest-desc">Beautiful traditional temples, serene bamboo forests, and historic gardens.</p>
-            </div>
-          </div>
-          
         </div>
       </section>
 
-      <!-- Checklist App -->
+      <!-- Vocabulary Notebook -->
       <section class="card">
-        <h2 class="card-title">📝 Vacation Checklist</h2>
-        <div class="checklist-wrapper">
-          <div class="input-group">
-            <input type="text" id="todo-input" placeholder="Add packing list item..." autocomplete="off" />
-            <button class="btn-add" id="btn-add">Add</button>
+        <h2 class="card-title">✍️ 나만의 일본어 단어장</h2>
+        <div class="notebook-wrapper">
+          <div class="input-row">
+            <input type="text" id="word-jp" placeholder="일본어 (단어/문장)" autocomplete="off" />
+            <input type="text" id="word-kr" placeholder="의미 (뜻)" autocomplete="off" />
+            <button class="btn-add-word" id="btn-add-word">추가</button>
           </div>
-          <ul class="list-items" id="todo-list">
+          
+          <ul class="word-list" id="word-list">
             <!-- Items will be generated dynamically by main.js -->
           </ul>
         </div>
