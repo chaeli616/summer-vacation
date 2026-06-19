@@ -1,14 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <title>Summer Vacation Planner</title>
+  <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+
+  <!-- Premium Header -->
+  <header>
+    <a href="#" class="logo">
+      <span class="logo-icon">🏖️</span>
+      <span>SummerJoy</span>
+    </a>
+    
+    <!-- Dark/Light Theme Switcher -->
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider">
+          <div class="slider-icons">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </div>
+        </div>
+      </label>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-gradient-overlay"></div>
+    <h1>Plan Your <span>Dream Vacation</span></h1>
+    <p>Discover breathtaking destinations, organize your checklist, and get ready for an unforgettable summer adventure.</p>
+    <button class="cta-btn" id="explore-btn">Start Exploring</button>
+  </section>
+
+  <!-- Main Dashboard Grid -->
+  <main class="container">
+    <div class="dashboard-grid">
+      
+      <!-- Destinations Cards -->
+      <section class="card">
+        <h2 class="card-title">🌴 Top Destinations 2026</h2>
+        <div class="destinations-list">
+          
+          <div class="dest-card">
+            <div class="dest-image-placeholder">🌊</div>
+            <div class="dest-info">
+              <h3 class="dest-name">Maldives</h3>
+              <p class="dest-desc">Turquoise lagoons, overwater villas, and spectacular coral reefs await you.</p>
+            </div>
+          </div>
+          
+          <div class="dest-card">
+            <div class="dest-image-placeholder">🏔️</div>
+            <div class="dest-info">
+              <h3 class="dest-name">Swiss Alps</h3>
+              <p class="dest-desc">Majestic snowy peaks, green alpine pastures, and scenic train journeys.</p>
+            </div>
+          </div>
+          
+          <div class="dest-card">
+            <div class="dest-image-placeholder">⛩️</div>
+            <div class="dest-info">
+              <h3 class="dest-name">Kyoto, Japan</h3>
+              <p class="dest-desc">Beautiful traditional temples, serene bamboo forests, and historic gardens.</p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Checklist App -->
+      <section class="card">
+        <h2 class="card-title">📝 Vacation Checklist</h2>
+        <div class="checklist-wrapper">
+          <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Add packing list item..." autocomplete="off" />
+            <button class="btn-add" id="btn-add">Add</button>
+          </div>
+          <ul class="list-items" id="todo-list">
+            <!-- Items will be generated dynamically by main.js -->
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
